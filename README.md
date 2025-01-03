@@ -19,12 +19,13 @@ The project is organized into the following main directories:
      - Updates the image tag in the GitOps repository.
 
 2. **Infrastructure Directory**:
+   - **Terraform** for Infrastructure as Code (IaC).
    - `modules` directory contains a main module named **platform**:
      - Defines the infrastructure including **EKS**, **VPC**, **RDS**, and other AWS components.
    - `environment` directory includes a `main.tf` file:
      - Runs the `platform` module with environment-specific variables.
 
-3. **GitOps Directory**:
+4. **GitOps Directory**:
    - `environments` directory contains environment-specific values files.
    - `application-dev` file in the root points to the application Helm chart for the development branch.
    - Changes to values files (e.g., image tags) automatically trigger **ArgoCD** for deployment updates.

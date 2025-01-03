@@ -65,3 +65,23 @@ The project is organized into the following main directories:
    ```bash
    git clone https://github.com/your-repo/E2E-DevOpsProject.git
    cd E2E-DevOpsProject
+2. Setup the infrastructure:
+
+```bash
+cd infrastructure/environment
+terraform init
+terraform apply
+```
+Build and deploy the application:
+
+CI/CD pipeline will automatically handle the build and deploy process once code is pushed to the repository.
+Verify the deployment:
+
+Visit the live application: app.kerbis.online.
+Usage
+Application:
+Visit the live application at app.kerbis.online.
+CI/CD Pipeline:
+Commit changes to the application or Helm values file to trigger automatic deployments.
+Infrastructure:
+Use Terraform to manage and update infrastructure configurations.

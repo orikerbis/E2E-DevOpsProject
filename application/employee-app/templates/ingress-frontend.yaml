@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: employee-system-ingress
+  namespace: employee-system
+  annotations:
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: app.kerbis.online
+    http:
+      paths:
+      - path: "/"
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: {{ .Values.client.service.name }}
+            port:
+              number: {{ .Values.client.service.port }}
+      - path: "/api"
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: {{ .Values.server.service.name }}
+            port:
+              number: {{ .Values.server.service.port }}
+      
+  

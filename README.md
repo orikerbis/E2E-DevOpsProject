@@ -51,6 +51,7 @@ The project is organized into the following main directories:
    - **External Secrets** are used for integrating sensitive information like the database password and host.
    - The **External Secret** Helm chart is deployed using Terraform.
    - It integrates with the `ClusterStore` resource in the application Helm chart and the `ExternalSecret` resource.
+   - These resources point to **AWS Secrets Manager** to retrieve the credentials.
    - This ensures secure and seamless management of sensitive information without exposing it in the codebase.
 
 - **GitOps with ArgoCD**:

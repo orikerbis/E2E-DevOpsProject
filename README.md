@@ -14,6 +14,7 @@ The project is organized into the following main directories:
      - Builds Docker images.
      - Pushes images to **AWS ECR**.
      - Updates the image tag in the GitOps repository.
+   - The application directory also includes a `docker-compose` file for running the application locally.
 
 2. **Infrastructure Directory**:
    - **Terraform** for Infrastructure as Code (IaC).

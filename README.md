@@ -2,7 +2,6 @@
 
 ## Description
 E2E-DevOpsProject demonstrates the entire process of deploying an application using modern DevOps practices. The project showcases an Employee Management System application, built with a Node.js backend, React frontend, and AWS RDS MySQL database. It includes directories for applications, infrastructure, and GitOps, along with a fully integrated CI/CD pipeline for seamless deployments. This project emphasizes establishing a robust and automated development environment, ensuring that changes are tested and deployed efficiently while maintaining consistency. The live application is available at: [app.kerbis.online](https://app.kerbis.online)
----
 
 ## Project Structure
 The project is organized into the following main directories:

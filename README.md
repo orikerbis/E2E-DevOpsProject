@@ -47,6 +47,12 @@ The project is organized into the following main directories:
   - Modular Terraform setup for creating AWS resources.
   - EKS cluster, VPC, RDS, and other necessary components.
 
+- ### External Secrets Integration
+   - **External Secrets** are used for integrating sensitive information like the database password and host.
+   - The **External Secret** Helm chart is deployed using Terraform.
+   - It integrates with the `ClusterStore` resource in the application Helm chart and the `ExternalSecret` resource.
+   - This ensures secure and seamless management of sensitive information without exposing it in the codebase.
+
 - **GitOps with ArgoCD**:
   - Automatically applies changes to Kubernetes deployments based on updates in the values file.
 

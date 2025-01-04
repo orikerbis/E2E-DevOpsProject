@@ -52,31 +52,6 @@ The project is organized into the following main directories:
 
 ---
 
-## Installation
-
-### Prerequisites
-- **Node.js** and **npm** installed.
-- **Terraform** installed.
-- Access to **AWS** account with necessary permissions.
-- **kubectl** and **Helm** installed for Kubernetes management.
-- **ArgoCD** configured in your cluster.
-
-### Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-repo/E2E-DevOpsProject.git
-   cd E2E-DevOpsProject
-2. Setup the infrastructure:
-
-   ```bash
-   cd infrastructure/environment
-   terraform init
-   terraform apply
-   ```
-
-
-   CI/CD pipeline will automatically handle the build and deploy process once code is pushed to the repository.
-
 ## License
    This project is licensed under the MIT License.
 

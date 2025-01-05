@@ -7,14 +7,11 @@ module "acm" {
 
   validation_method = "DNS"
 
-  subject_alternative_names = [
-    "*.kerbis.online",
-    "app.kerbis.online",
-  ]
+  subject_alternative_names = [var.domain_name]
 
   wait_for_validation = true
 
   tags = {
-    Name = "kerbis.online"
+    Name = var.domain_name
   }
 }

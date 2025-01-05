@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: employee-app-dev
+  name: employee-app-test
   namespace: argocd
 spec:
   project: default
   sources:
     - repoURL: "https://github.com/orikerbis/application-repo.git"
-      targetRevision: develop
+      targetRevision: test
       path: employee-app
       helm:
         valueFiles:
-          - $values/environments/dev/values.yaml
+          - $values/environments/test/values.yaml
     - repoURL: "https://github.com/orikerbis/employee-gitops.git"
       targetRevision: main
       ref: values

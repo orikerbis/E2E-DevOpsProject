@@ -1,5 +1,5 @@
 # E2E-DevOpsProject
-**Note:** The original project is divided into three repositories: one for the application code + Helm Chart, one for the infrastructure code, and another for the GitOps directories. This repository combines all components for convenience and ease of use.
+**Note:** The original project is divided into three repositories: one for the application code + Helm Chart, one for the infrastructure code, and another for the GitOps directories. This repository combines all components for convenience.
 
 ## Description
 E2E-DevOpsProject demonstrates the entire process of deploying an application using modern DevOps practices. The project showcases an Employee Management System application, built with a Node.js backend, React frontend, and AWS RDS MySQL database. It includes directories for applications, infrastructure, and GitOps, along with a fully integrated CI/CD pipeline for seamless deployments.

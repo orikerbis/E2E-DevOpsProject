@@ -4,6 +4,12 @@ provider "aws" {
     role_arn = "arn:aws:iam::825765414083:role/eks-admin-role"
   }
 }
+
+provider "aws" {
+  region = "us-east-1"
+  alias  = "virginia"
+}
+
  terraform {
   required_providers {
     aws = {
@@ -58,7 +64,6 @@ provider "kubectl" {
   exec {
     api_version = "client.authentication.k8s.io/v1beta1"
     command     = "aws"
-    # This requires the awscli to be installed locally where Terraform is executed
     args = ["eks", "get-token", "--cluster-name", "my-eks", "--role-arn", "arn:aws:iam::825765414083:role/eks-admin-role"]
   }
 }

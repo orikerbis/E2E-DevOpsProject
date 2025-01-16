@@ -4,6 +4,7 @@ metadata:
   name: {{ include "employee-app.fullname" . }}-client
   labels:
     {{- include "employee-app.labels" . | nindent 4 }}
+    app: frontend
   namespace: employee-system
 spec:
   replicas: {{ .Values.client.replicaCount }}
@@ -14,6 +15,7 @@ spec:
     metadata:
       labels:
         {{- include "employee-app.labels" . | nindent 8 }}
+        app: frontend
     spec:
       containers:
         - name: {{ .Chart.Name }}-client
@@ -23,15 +25,10 @@ spec:
             - name: http
               containerPort: {{ .Values.client.service.port }}
               protocol: TCP
-          # livenessProbe:
-          #   httpGet:
-          #     path: /
-          #     port: {{ .Values.client.service.port }}
-          #   initialDelaySeconds: 30
-          #   periodSeconds: 10
-          # readinessProbe:
-          #   httpGet:
-          #     path: /
-          #     port: {{ .Values.client.service.port }}
-          #   initialDelaySeconds: 5
-          #   periodSeconds: 10
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
